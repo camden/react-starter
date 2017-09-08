@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    modules: ['node_modules'],
+    modules: [__dirname, 'node_modules'],
   },
   module: {
     rules: [
@@ -20,7 +20,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
-      }
+      },
     ],
   },
   plugins: [
@@ -34,4 +34,3 @@ module.exports = {
     }),
   ],
 };
-
