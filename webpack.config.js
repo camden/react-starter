@@ -6,11 +6,11 @@ module.exports = {
   devtool: 'cheap-module-source-map',
   entry: ['./src/index.js'],
   output: {
-    path: path.join(__dirname, '../dist'),
+    path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
   },
   resolve: {
-    modules: [__dirname, 'node_modules'],
+    modules: [path.join(__dirname, 'src/'), 'node_modules'],
   },
   module: {
     rules: [
